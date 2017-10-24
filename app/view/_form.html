@@ -1,0 +1,64 @@
+<div layout="column" aria-label="_Form" ng-cloak class="md-inline-form">
+
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <h2>peliculas</h2>
+            <span flex></span>
+            <md-button class="md-icon-button" ng-click="cancelar()">
+                <md-icon md-svg-src="close" aria-label="Close dialog"></md-icon>
+            </md-button>
+        </div>
+    </md-toolbar>
+
+    <md-card-content flex layout-padding>
+
+        <div layout="column">
+
+            <md-input-container>
+                <label>Director</label>
+                <input type="text" name="director" ng-model="DataForm.director" required>
+            </md-input-container>
+
+            <md-input-container>
+                <label>Pelicula</label>
+                <input type="text" name="nombre" ng-model="DataForm.nombre" required>
+            </md-input-container>
+
+            <md-input-container flex>
+                <label>Genero</label>
+                <md-select ng-model="DataForm.idGenero">
+                    <md-option ng-repeat="dato in select_genero" value="{{dato.idGenero}}" ng-s>{{dato.nombre}}</md-option>
+                </md-select>
+            </md-input-container>
+
+            <md-input-container>
+                <label>Lanzamiento</label>
+                <!--
+                <input type="date" name="lanzamiento" ng-model="DataForm.lanzamiento" ng-value="DataForm.lanzamiento" required>
+                -->
+                <md-datepicker ng-model="DataForm.lanzamiento" md-placeholder="Fecha" required></md-datepicker>
+            </md-input-container>
+
+            <!--
+                <div>
+                    <md-input-container class="md-block">
+                        <input type="file" name="file" ng-model="file" accept="image/*">
+                    </md-input-container>
+
+                </div>
+
+            -->
+            <md-input-container>
+                <label>Imagen</label>
+                <input type="text" name="imagen" ng-model="DataForm.imagen" required>
+            </md-input-container>
+
+            <md-input-container>
+                <md-button type="submit" class="md-raised md-primary">enviar</md-button>
+            </md-input-container>
+        </div>
+
+
+    </md-card-content>
+
+</div>

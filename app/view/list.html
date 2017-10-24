@@ -1,0 +1,43 @@
+<div ng-cloak>
+
+
+
+    <!-- tabla -->
+
+
+    <md-table-container>
+        <table md-table>
+            <thead md-head md-order="ordenar">
+                <tr md-row>
+
+                    <th md-column md-numeric><span>id</span></th>
+                    <th md-column md-order-by="nombre">pelicula</th>
+                    <th md-column>lanzamiento</th>
+                    <th md-column>director</th>
+                    <th md-column>genero</th>
+                    <th md-column>imagen</th>
+                    <th md-column>accion</th>
+
+                </tr>
+            </thead>
+            <tbody md-body>
+                <tr md-row ng-repeat="dato in consulta |  filter: filter.search | orderBy: ordenar">
+                    <td md-cell>{{dato.idPelicula | number: 0}}</td>
+                    <td md-cell>{{dato.nombre}}</td>
+                    <td md-cell>{{dato.lanzamiento}}</td>
+                    <td md-cell>{{dato.director}}</td>
+                    <td md-cell>{{dato.genero}}</td>
+                    <td md-cell>{{dato.imagen}}</td>
+                    <td md-cell><i ng-click="eliminar(dato.idPelicula) " class="material-icons ">delete</i>
+                        <i ng-click="dialog($event, 'app/view/update.html', dato); " class="material-icons ">update</i>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </md-table-container>
+
+
+
+
+</div>

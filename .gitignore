@@ -1,0 +1,24 @@
+# -- MARLON ZAYRO ARIAS VARGAS --
+
+
+# BACKEND
+.php_cs_cache
+
+# BOWER
+bower_components/*
+
+# SRC
+src/desktop/*
+src/package/*
+
+# VSCODE
+.history
+.vscodeignore
+
+# COMPOSER
+vendor/
+composer.lock
+
+# NODEJS
+node_modules/*
+package-lock.json

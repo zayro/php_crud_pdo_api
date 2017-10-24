@@ -1,0 +1,24 @@
+<md-table-container>
+    <table md-table>
+        <thead md-head md-order="ordenar">
+            <tr md-row>
+
+                <th md-column m>TITULO</th>
+                <th md-column m>EPISODIO</th>
+                <th md-column m>DIRECTOR</th>
+
+            </tr>
+        </thead>
+        <tbody md-body>
+            <tr md-row ng-repeat="dato in api |  filter: filter.search | orderBy: ordenar">
+                <td md-cell>{{dato.title}}</td>
+                <td md-cell>{{dato.episode_id}}</td>
+                <td md-cell>{{dato.director}}</td>
+
+
+            </tr>
+        </tbody>
+    </table>
+</md-table-container>
+
+<md-button class="md-raised md-primary" ng-click="fn_select_api()">Cargar Api Remote</md-button>
