@@ -1,5 +1,8 @@
 # Archivos analizar
 app/* linguist-vendored
 
-# Analizar archivos Sql
-*.sql linguist-generated=true
+# ignora porcentaje de codigo html
+index.html linguist-vendored=false
+
+# ignora lenguaje programacion
+*.html linguist-detectable=false
