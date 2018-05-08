@@ -1,5 +1,5 @@
 # Archivos analizar
-app/* linguist-vendored
+./app/* linguist-vendored
 
 # ignora porcentaje de codigo html
 index.html linguist-vendored=false
