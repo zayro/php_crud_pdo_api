@@ -2,7 +2,7 @@
 ./app/* linguist-vendored
 
 # ignora porcentaje de codigo html
-index.html linguist-vendored=false
+app.js linguist-vendored=false
 
 # ignora lenguaje programacion
 *.html linguist-detectable=false
