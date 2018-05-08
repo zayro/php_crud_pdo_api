@@ -6,3 +6,4 @@
 
 # ignora lenguaje programacion
 *.html linguist-detectable=false
+*.js linguist-detectable=false
